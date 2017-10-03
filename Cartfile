@@ -4,5 +4,5 @@ github "ReactiveX/RxSwift"
 github "RxSwiftCommunity/RxAlamofire"
 github "SwiftyJSON/SwiftyJSON"
 github "malcommac/SwiftDate" "4.3.0"
-github "xmartlabs/Eureka" ~> 3.0
+github "xmartlabs/Eureka" "feature/Xcode9-Swift4"
 github "p2/OAuth2" ~> 3.0

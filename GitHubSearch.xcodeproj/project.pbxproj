@@ -63,6 +63,9 @@
 		0677A4CA1F6EB63800699BD1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0677A4BF1F6EB63800699BD1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0677A4CB1F6EB63800699BD1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0677A4C01F6EB63800699BD1 /* SwiftyJSON.framework */; };
 		0677A4CC1F6EB63800699BD1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0677A4C01F6EB63800699BD1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06EAAE541FA0BA45005FEB1B /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EAAE531FA0BA45005FEB1B /* RxFeedback.framework */; };
+		06EAAE551FA0BA61005FEB1B /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EAAE531FA0BA45005FEB1B /* RxFeedback.framework */; };
+		06EAAE561FA0BA61005FEB1B /* RxFeedback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06EAAE531FA0BA45005FEB1B /* RxFeedback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,7 @@
 				0677486F1F6FB9D900D746D7 /* SwiftDate.framework in Embed Frameworks */,
 				0677A4C81F6EB63800699BD1 /* RxCocoa.framework in Embed Frameworks */,
 				0677A4CC1F6EB63800699BD1 /* SwiftyJSON.framework in Embed Frameworks */,
+				06EAAE561FA0BA61005FEB1B /* RxFeedback.framework in Embed Frameworks */,
 				0677A4C21F6EB63800699BD1 /* Alamofire.framework in Embed Frameworks */,
 				0677A4C41F6EB63800699BD1 /* AlamofireImage.framework in Embed Frameworks */,
 				063CF4321F76854B00986EF6 /* OAuth2.framework in Embed Frameworks */,
@@ -149,6 +153,7 @@
 		0677A4BE1F6EB63800699BD1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		0677A4BF1F6EB63800699BD1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		0677A4C01F6EB63800699BD1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		06EAAE531FA0BA45005FEB1B /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06EAAE541FA0BA45005FEB1B /* RxFeedback.framework in Frameworks */,
 				0677A4C91F6EB63800699BD1 /* RxSwift.framework in Frameworks */,
 				060D4A941F739F960028A2E9 /* Eureka.framework in Frameworks */,
 				0677486E1F6FB9D900D746D7 /* SwiftDate.framework in Frameworks */,
@@ -164,6 +170,7 @@
 				0677A4C11F6EB63800699BD1 /* Alamofire.framework in Frameworks */,
 				0677A4C31F6EB63800699BD1 /* AlamofireImage.framework in Frameworks */,
 				063CF4311F76854B00986EF6 /* OAuth2.framework in Frameworks */,
+				06EAAE551FA0BA61005FEB1B /* RxFeedback.framework in Frameworks */,
 				0677A4C51F6EB63800699BD1 /* RxAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 		063CCC531F70FEEF00EF1764 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06EAAE531FA0BA45005FEB1B /* RxFeedback.framework */,
 				0677A4BB1F6EB63800699BD1 /* Alamofire.framework */,
 				0677A4BC1F6EB63800699BD1 /* AlamofireImage.framework */,
 				060D4A931F739F960028A2E9 /* Eureka.framework */,

@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxFeedback
 
 enum State {
     case loggedIn(AuthenticatedUserViewModel)
@@ -25,7 +26,7 @@ enum State {
             return ""
         }
     }
-    fileprivate typealias FeedbackLoop = (Driver<State>) -> Driver<Event>
+    fileprivate typealias FeedbackLoop = (Driver<State>) -> Signal<Event>
 }
 
 fileprivate enum Event {
@@ -60,7 +61,7 @@ fileprivate func system(
         .map { Event.newData(viewModels.authenticatedUserViewModel(user: $0)) }
     
     let dataFeedbackLoop: State.FeedbackLoop = { state in
-        return currentUser.asDriverIgnoringErrors()
+        return currentUser.asSignalIgnoringErrors()
     }
     
     let toggleUserFeedbackLoop: State.FeedbackLoop = { state in
@@ -70,17 +71,17 @@ fileprivate func system(
                 switch state {
                 case .loggedIn:
                     oAuthService.logout()
-                    return Driver.just(Event.logOut)
+                    return Signal.just(Event.logOut)
                 case .loggedOut:
-                    return currentUser.asDriverIgnoringErrors()
+                    return currentUser.asSignalIgnoringErrors()
                 case .authorizing:
-                    return Driver.empty()
+                    return Signal.empty()
                 }
         }
     }
-    return Driver.system(initialState,
-                         accumulator: State.reduce,
-                         feedback: dataFeedbackLoop, toggleUserFeedbackLoop)
+    return Driver<Any>.system(initialState: initialState,
+                              reduce: State.reduce,
+                              feedback: dataFeedbackLoop, toggleUserFeedbackLoop)
 }
 
 protocol MyProfileViewModel {
